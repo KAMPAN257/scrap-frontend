@@ -1,0 +1,799 @@
+/* Product.module.css */
+
+/* .myBody{
+  background-color: #2e7d32;
+} */
+
+.myProductsContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourProductsTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white; /* Earthy green title */
+  font-size: 2em; /* Slightly larger title */
+}
+
+.centeredMessage {
+  text-align: center;
+  color: #555;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 90%;
+  /* max-width: 1200px; */
+}
+
+.productCard {
+  border: 1px solid #d2d6de; /* Light grey border */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.productCard:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.productImageContainer {
+  width: 100%;
+  height: 180px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa; /* Light background for image container */
+  padding: 10px; /* Add some padding around the image */
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure full image visibility */
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em; /* Slightly smaller title within card */
+  color: #2e7d32; /* Darker green for title */
+}
+
+.productName {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #434a54;
+}
+
+.productDetails { /* Renamed to be more specific */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap; /* Prevent details from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long details */
+}
+
+.productPrice {
+  margin-top: auto; /* Push price to the bottom */
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust min-width for smaller screens */
+  }
+  .productImageContainer {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .productsGrid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+  .productCard {
+    border-radius: 8px; /* Slightly less rounded on very small screens */
+  }
+  .productImageContainer {
+    height: 120px;
+  }
+}
+
+/* ... other styles ... */
+
+.productImageContainer {
+  width: 100%;
+  height: 180px; /* Adjust height as needed */
+  display: flex;
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Horizontally center the image */
+  background-color: #f8f9fa; /* Light background for image container */
+  padding: 10px; /* Add some padding around the image */
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure full image visibility */
+}
+
+/* ... other styles ... */
+
+/* Product.module.css */
+
+/* ... other styles ... */
+
+.productCard {
+  /* ... other card styles ... */
+  flex-direction: column; /* Ensure image and details stack vertically */
+}
+
+.productImageContainer {
+  width: 100%;
+  /* Increase the height to make the image bigger */
+  height: 250px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 15px; /* Add more padding if needed */
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  /* Choose object-fit based on how you want the image to scale */
+  object-fit: contain; /* Keeps aspect ratio, may have empty space */
+  /* object-fit: cover; /* Fills the container, may crop the image */
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ... other details styles ... */
+
+/* Responsive adjustments - adjust image height for smaller screens */
+@media (max-width: 768px) {
+  .productImageContainer {
+    height: 200px; /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .productImageContainer {
+    height: 180px; /* Adjust for small screens */
+  }
+}
+
+/* Product.module.css */
+
+/* ... other styles ... */
+
+.productCard {
+  /* ... other card styles ... */
+  display: flex;
+  flex-direction: column; /* Stack image and details */
+  align-items: center; /* Center items horizontally within the card */
+}
+
+.productImageContainer {
+  width: 80%; /* Adjust width as needed, keep it within the card */
+  height: auto; /* Adjust height as needed to maintain aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-bottom: 10px; /* Add some space between image and details */
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Make details take full width of the card */
+  text-align: center; /* Center text within details */
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #2e7d32;
+}
+
+.productName {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #434a54;
+}
+
+.productDetails { /* Style for the details text itself */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  margin-top: 10px; /* Add some space above the price */
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .productImageContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .productImageContainer {
+    width: 60%;
+  }
+}
+
+/* Product.module.css */
+
+/* ... other styles ... */
+
+.productCard {
+  /* ... other card styles ... */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px; /* Add some padding around the entire card */
+}
+
+.productImageContainer {
+  width: 90%; /* Make the image container take up most of the card width */
+  height: 200px; /* Set a larger fixed height for the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  margin-bottom: 15px; /* More margin below the image */
+  border-radius: 8px; /* Optional: Add some border radius to the image container */
+  overflow: hidden; /* Clip any image overflow if using cover */
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Or 'cover' depending on your preference */
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #2e7d32;
+}
+
+.productName {
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #434a54;
+}
+
+.productDetails { /* Style for the details text itself */
+  margin-bottom: 8px;
+  font-size: 0.95em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .productImageContainer {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productImageContainer {
+    height: 150px;
+  }
+}
+
+/* Product.module.css */
+
+/* ... other styles ... */
+
+.productCard {
+  /* ... other card styles ... */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.productImageContainer {
+  width: 100%; /* Image container takes full width of the card */
+  /* Set a maximum height relative to the card's potential height */
+  max-height: 250px; /* Adjust this value based on your desired max image height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productImage {
+  max-width: 100%; /* Image doesn't exceed container width */
+  max-height: 100%; /* Image doesn't exceed container height */
+  object-fit: contain; /* Or 'cover' depending on your preference */
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+/* ... other details styles ... */
+
+/* Responsive adjustments - adjust max-height for smaller screens if needed */
+@media (max-width: 768px) {
+  .productImageContainer {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productImageContainer {
+    max-height: 180px;
+  }
+}
+
+/* Product.module.css */
+
+.myProductsContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourProductsTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+.centeredMessage {
+  text-align: center;
+  color: #555;
+}
+
+.productsGrid {
+  display: flex; /* Change to flex layout for horizontal arrangement */
+  flex-direction: row; /* Arrange items in a row */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+  gap: 20px; /* Spacing between cards */
+  width: 95%; /* Adjust width as needed */
+  max-width: 1200px; /* Optional maximum width */
+  padding-bottom: 15px; /* Add some padding at the bottom for scroll indicator */
+}
+
+.productCard {
+  border: 1px solid #d2d6de;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex; /* Make card a flex container for image and details */
+  flex-direction: column; /* Stack image and details vertically initially */
+  align-items: center; /* Center items horizontally within the card */
+  width: 300px; /* Set a fixed width for each card */
+  flex-shrink: 0; /* Prevent cards from shrinking below their width */
+}
+
+.productImageContainer {
+  width: 80%;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #2e7d32;
+}
+
+.productName {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #434a54;
+}
+
+.productDetails { /* Style for the details text itself */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments (optional, for smaller screens) */
+@media (max-width: 768px) {
+  .productsGrid {
+    width: 98%;
+  }
+  .productCard {
+    width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    width: 200px;
+  }
+}
+/* Product.module.css */
+
+.myProductsContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourProductsTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+.centeredMessage {
+  text-align: center;
+  color: #555;
+}
+
+.productsGrid {
+  display: flex; /* Use flex layout for horizontal arrangement */
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  gap: 20px; /* Spacing between cards */
+  width: 95%; /* Adjust width as needed */
+  max-width: 1200px; /* Optional maximum width */
+  justify-content: flex-start; /* Align cards to the left, adjust as needed (space-around, space-between, center) */
+}
+
+.productCard {
+  border: 1px solid #d2d6de;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Set a maximum width for the cards, adjust based on how many you want per row */
+  max-width: 300px;
+  flex-basis: calc(33.33% - 20px); /* Example: Try to fit 3 cards per row initially */
+}
+
+.productImageContainer {
+  width: 80%;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #2e7d32;
+}
+
+.productName {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #434a54;
+}
+
+.productDetails { /* Style for the details text itself */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 992px) {
+  .productCard {
+    flex-basis: calc(50% - 20px); /* Try to fit 2 cards per row on medium screens */
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productCard {
+    flex-basis: 100%; /* Display 1 card per row on small screens */
+    max-width: none;
+  }
+}
+
+/* Product.module.css */
+
+body { /* Apply centering to the body if this is the only content on the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  
+  /* background-color: #f4f4f4;  */
+  /* background-image: url(".././assets/images/bgimg4.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1350px 1000px;  
+   */
+  
+
+}
+
+.myProductsContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the title and grid horizontally */
+  width: 95%; /* Limit the width of the container */
+  max-width: 1200px; /* Optional: Maximum width of the content */
+}
+
+.ourProductsTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: lightgreen;
+  font-size: 3em;
+  font-family: "Courier New", Courier, monospace;  
+  font-weight: bold;
+  /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;  */
+  
+}
+
+.centeredMessage {
+  text-align: center;
+  color: #555;
+}
+
+.productsGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%; /* Make the grid take the full width of its container */
+  justify-content: center; /* Center the cards horizontally within the grid */
+}
+
+.productCard {
+  border: 1px solid #d2d6de;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  flex-basis: auto; /* Allow cards to size based on content and available space */
+}
+
+.productImageContainer {
+  width: 80%;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.productDetails {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.productTitle {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  color: #2e7d32;
+}
+
+.productName {
+  margin-bottom: 6px;
+  font-size: 0.95em;
+  color: #434a54;
+}
+
+.productDetails { /* Style for the details text itself */
+  margin-bottom: 6px;
+  font-size: 0.9em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productPrice {
+  margin-top: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #1e8e3e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .productCard {
+    max-width: 45%; /* Adjust for two cards on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .productCard {
+    max-width: 90%; /* One card taking most of the width on small screens */
+  }
+}
+
+/*--------------------------------*/
+
+/* Product.module.css (or your preferred CSS module file) */
+
+.viewDetailsButton {
+  display: inline-block; /* Allows for setting padding and margins */
+  padding: 8px 16px; /* Adjust padding as needed */
+  font-size: 14px; /* Adjust font size */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none; /* Remove underline from link */
+  background-color: #007bff; /* Primary blue color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.viewDetailsButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.viewDetailsButton:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Add a custom focus style */
+}
+
+/* Optional: Adjust styles for smaller screens */
+@media (max-width: 600px) {
+  .viewDetailsButton {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-top: 8px;
+  }
+}

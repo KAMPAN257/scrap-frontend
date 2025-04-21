@@ -1,0 +1,113 @@
+/* SellerAddProduct.module.css */
+
+.addProductContainer {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #e6e6e6, #fff);
+    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+  }
+  
+  .addProductContainer h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4a5568; /* Slate Gray */
+    font-weight: 700;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2d3748; /* Dark Gray */
+  }
+  
+  .formGroup input[type='text'],
+  .formGroup input[type='file'] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #edf2f7; /* Light Gray */
+    color: #2d3748;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .formGroup input[type='text']:focus,
+  .formGroup input[type='file']:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4299e1; /* Blue focus ring */
+  }
+  
+  .formGroup input[type='file'] {
+    padding: 8px;
+  }
+  
+  .success {
+    color: #38a169; /* Green */
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f0fff4;
+    border-radius: 6px;
+    border: 1px solid #9ae6b4;
+  }
+  
+  .error {
+    color: #e53e3e; /* Red */
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff5f5;
+    border-radius: 6px;
+    border: 1px solid #fc8181;
+  }
+  
+  button {
+    background-color: #2b6cb0; /* Blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 4px 4px 8px #b3b3b3, -4px -4px 8px #ffffff;
+  }
+  
+  button:hover {
+    background-color: #1a4382; /* Darker Blue */
+    transform: translateY(-2px);
+  }
+  
+  button:disabled {
+    background-color: #a0aec0; /* Gray */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  .imagePreview {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e0; /* Light Blue Gray */
+    box-shadow: 2px 2px 5px #e0e0e0;
+  }
+
+  /* SellerLayout.module.css */
+.layoutContainer {
+    display: flex;
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px; /* Match sidebar width */
+  }

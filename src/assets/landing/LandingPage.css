@@ -1,0 +1,467 @@
+/* LandingPage.css */
+
+.landing-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #8BC34A, #4CAF50); /* Green gradient */
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-button {
+    background-color: #FFC107; /* Yellow button */
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #FFEB3B; /* Lighter yellow on hover */
+  }
+  
+  .features,
+  .how-it-works,
+  .testimonials {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light grey background */
+  }
+  
+  .features h2,
+  .how-it-works h2,
+  .testimonials h2 {
+    color: #4CAF50; /* Green headings */
+    margin-bottom: 40px;
+    font-size: 2.2em;
+  }
+  
+  .features-grid,
+  .steps-grid,
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .feature-item,
+  .step-item,
+  .testimonial-item {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-item:hover,
+  .step-item:hover,
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .feature-icon,
+  .step-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #4CAF50; /* Green icons */
+  }
+  
+  .testimonial-item .quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-item .author {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .footer {
+    background-color: #e0e0e0; /* Light grey footer */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #4CAF50; /* Green hover */
+  }
+
+  /* LandingPage.css */
+
+/* ... (other styles) ... */
+
+.features-grid,
+.steps-grid {
+  display: flex; /* Use flexbox for parallel layout */
+  flex-wrap: wrap; /* Allow wrapping to new lines on smaller screens */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Adjust gap between items as needed */
+}
+
+.feature-item,
+.step-item {
+  flex: 0 1 calc(30% - 20px); /* Adjust width for desired number of cards per row */
+  min-width: 250px; /* Minimum width to prevent cards from becoming too narrow */
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center text within cards */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .feature-item,
+  .step-item {
+    flex: 0 1 calc(45% - 20px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .feature-item,
+  .step-item {
+    flex: 0 1 100%; /* One card per row on very small screens */
+  }
+}
+
+/* ... (other styles) ... */
+
+/* LandingPage.css */
+
+/* ... (existing styles) ... */
+
+.navbar {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A); /* Green gradient navbar */
+    color: white; /* White text on navbar */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* max-width: 00px; */
+    /* margin: 0 auto; */
+    margin-left: 50px;
+    margin-right: 150px;
+  }
+  
+  .navbar-logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* White logo text */
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-left: 25px; /*Increased spacing between menu items*/
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: white; /* White links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 15px; /* Added padding to links for better touch area */
+    border-radius: 5px; /* Rounded corners for links */
+  }
+  
+  .navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white background on hover */
+    color: #FFC107; /* Yellow hover color */
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column;
+      align-items: flex-start;
+      position: absolute;
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      width: 100%;
+      background: linear-gradient(135deg, #4CAF50, #8BC34A);
+      display: none; /* Initially hidden on smaller screens */
+    }
+  
+    .navbar-item {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-link {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  
+    .navbar-menu.show {
+      display: block; /* Show menu when needed */
+    }
+  
+    /* Add a hamburger menu icon and logic to toggle .navbar-menu.show */
+  }
+  
+  /* ... (existing styles) ... */
+
+  .navbar {
+  /* ... other navbar styles ... */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Pushes logo to the left and menu/cart to the right */
+  align-items: center; /* Vertically aligns items */
+  /* ... other container styles ... */
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 750px;
+  /* ... other menu styles ... */
+}
+
+.navbar-item {
+  margin-left: 20px; /* Adjust spacing between menu items */
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #333; /* Example color */
+  /* ... other link styles ... */
+}
+
+.navbar-cart {
+  display: flex;
+  align-items: center; /* Vertically align the cart icon */
+  margin-left: 20px; /* Add some spacing between the menu and the cart */
+}
+
+.navbar-cart-link {
+  text-decoration: none;
+  color: #333; /* Example color */
+  /* ... other cart link styles ... */
+}
+
+.navbar-cart-link svg { /* Style the SVG icon */
+  width: 24px;
+  height: 24px;
+}
+
+/* Style for the cart count (optional) */
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* ... other navbar styles ... */
+
+.navbar-cart {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  
+}
+
+.navbar-cart-link {
+  text-decoration: none;
+  /* color: inherit; Inherit color from navbar text by default */
+  color: black;
+  font-size: 1.5em; /* Adjust the size of the cart symbol */
+}
+
+/* Style to force the cart to be black */
+.black-cart {
+  color: black !important; /* Use !important for higher specificity if needed */
+}
+
+/* Optional cart count styling */
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+/* LandingPage.css */
+
+/* ... other styles ... */
+
+/* Navigation Bar */
+.navbar {
+  background-color: #5cb85c; /* Earthy green */
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the container for responsiveness */
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Space out logo and menu/cart */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Limit maximum width for larger screens */
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  margin-left: 20px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #d9edf7; /* Light hover color */
+}
+
+.navbar-cart {
+  margin-left: 20px;
+}
+
+.navbar-cart-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.navbar-cart-link:hover {
+  color: #d9edf7;
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack logo and menu vertically */
+    align-items: center; /* Center items */
+    padding: 10px 15px;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Stack menu items vertically */
+    width: 100%; /* Make menu take full width */
+    margin-bottom: 10px;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+    text-align: center;
+    width: 100%; /* Make each item full width */
+  }
+
+  .navbar-cart {
+    margin-left: 0; /* Reset margin */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .navbar-container {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    font-size: 1.6em;
+  }
+
+  .navbar-item {
+    margin-left: 15px;
+  }
+
+  .navbar-link {
+    font-size: 0.95em;
+  }
+
+  .navbar-cart {
+    margin-left: 15px;
+    font-size: 1.1em;
+  }
+}

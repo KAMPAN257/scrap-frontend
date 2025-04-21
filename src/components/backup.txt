@@ -1,0 +1,166 @@
+/* addProduct.css */-------------------------
+
+/* Apply these styles to the body or a top-level container if .my-products-container isn't already the direct child of the body */
+body, html, #root { /* Assuming your React app is mounted in an element with id "root" */
+  height: 100%; /* Make sure the body and html take up the full viewport height */
+  margin: 40px; /* Remove default body margin */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: transparent; /* Optional: A light background for the page */
+
+}
+
+/* General container for the entire section */
+.my-products-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  background-color: transparent; /* Light grey background */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* Remove the auto margins that were centering it within its parent */
+  /* margin: 20px auto; */
+  max-width: 1200px; /* Limit the maximum width */
+}
+
+/* Heading style */
+.my-products-container h2 {
+  color: #28a745; /* ScrapeGenie green */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+/* Style for the "No products listed yet" message */
+.centered-message {
+  text-align: center;
+  color: #6c757d; /* Grey text */
+  font-size: 1.1em;
+}
+
+/* Container for the horizontal list of products */
+.products-list-horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 25px;
+  padding-bottom: 20px; /* Add some padding for the scrollbar */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+/* Individual product card style */
+.product-card-horizontal {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  width: 320px; /* Slightly wider cards */
+  flex-shrink: 0; /* Prevent shrinking */
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card-horizontal:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the product image */
+.product-image-container-horizontal {
+  width: 140px; /* Increased image width */
+  height: 140px; /* Increased image height */
+  overflow: hidden;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Placeholder background */
+}
+
+/* Style for the product image itself */
+.product-image-horizontal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Container for the product details */
+.product-details-horizontal {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-details-horizontal h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #343a40; /* Dark grey */
+  font-weight: 500;
+}
+
+.product-details-horizontal p:nth-child(2) {
+  color: #007bff; /* ScrapeGenie blue for product name */
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-details-horizontal p:nth-child(3) {
+  color: #555;
+  font-size: 0.95em;
+  margin-bottom: 12px;
+}
+
+.product-details-horizontal p:last-child {
+  color: #28a745; /* ScrapeGenie green for price */
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  body, html, #root {
+    align-items: flex-start; /* On smaller screens, align items to the top to avoid content overflow */
+    padding-top: 20px; /* Add some top padding */
+  }
+
+  .my-products-container {
+    padding: 20px;
+    margin: 20px; /* Keep some margin on smaller screens */
+  }
+
+  .my-products-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .products-list-horizontal {
+    gap: 15px;
+  }
+
+  .product-card-horizontal {
+    width: 280px;
+  }
+
+  .product-image-container-horizontal {
+    width: 100px;
+    height: 100px;
+  }
+
+  .product-details-horizontal {
+    padding: 15px;
+  }
+
+  .product-details-horizontal h3 {
+    font-size: 1.3em;
+    margin-bottom: 8px;
+  }
+
+  .product-details-horizontal p {
+    font-size: 0.9em;
+    margin-bottom: 6px;
+  }
+}

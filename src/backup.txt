@@ -1,0 +1,172 @@
+------------product.jsx
+
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from '../../assets/Product.module.css'; 
+//import { data } from 'react-router-dom';
+
+const Product = () => {
+  const [products, setProducts] = useState([]);
+  const userId = localStorage.getItem('id');
+  //console.log(data);
+  const formData = new FormData();
+    
+  //formData.append("image",data.imageUrl["/images/plastic.jpg"]);
+  // formData.append("image",data.image[0]);
+
+  useEffect(() => {
+    const fetchUserProducts = async () => {
+      try {
+        if (userId) {
+          const response = await axios.get("/getproducts");
+          // setconstProducts(response.data.data);
+          setProducts(response.data.data);
+        }
+      } catch (error) {
+        console.error('Error fetching user products:', error);
+      }
+    };
+
+    fetchUserProducts();
+  }, [userId]);
+
+  
+
+  
+
+  if (products.length === 0) {
+    return <div className={styles.myProductsContainer}><h2 className={styles.centeredMessage}>No products listed yet.</h2></div>;
+  }
+
+  return (
+    <div className={styles.myProductsContainer}>
+      <h2 className={styles.ourProductsTitle}>Our Products</h2>
+      <div className={styles.productsGrid}> 
+        {products.map((product) => (
+          <div key={product._id} className={styles.productCard}>
+            {/* {product.imageUrl && (
+              // <div className={styles.productImageContainer}> 
+              //  <img
+              //     src={product.imageUrl || "/images/plastic.jpg"} 
+              //     alt={product.materialType}
+              //     className={styles.productImage}
+              // />
+              //   </div>
+              <div className="mb-3">
+            
+                <input type="file" {...register("imageUrl")}></input>
+              </div>
+            )} */}
+            <td>
+                            <img  style ={{height:100,width:100}}src={product?.imageUrl}></img>
+                        </td>
+            <div className={styles.productDetails}> 
+              <h3 className={styles.productTitle}>{product.materialType}</h3>
+              
+              <p className={styles.productName}>Product Name: {product.productName} {product.unit}</p>
+              <p className={styles.productDetails}>Details: {product.details}</p>
+              {product.price && <p className={styles.productPrice}>Price: {product.price}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Product;
+
+-----------product css
+
+/* Product.module.css */
+
+.myProductsContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ourProductsTitle {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .centeredMessage {
+    text-align: center;
+  }
+  
+  .productsGrid {
+    display: grid; /* Use CSS Grid for a wrapping layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax width as needed */
+    gap: 20px; /* Spacing between grid items */
+    width: 90%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional maximum width */
+  }
+  
+  .productCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack image and details vertically */
+  }
+  
+  .productImageContainer {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .productDetails {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .productTitle {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+  
+  .productName {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #007bff;
+  }
+  
+  .productDetails {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .productPrice {
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .productsGrid {
+      grid-template-columns: 1fr; /* One card per row on smaller screens */
+    }
+    .productCard {
+      width: 100%; /* Make cards full width on smaller screens */
+    }
+  }

@@ -1,0 +1,231 @@
+/* Assuming you have a global style sheet or a specific login.css */
+
+body {
+    margin: 0;
+  }
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color:transparent; 
+    /* padding: 20px;  */
+    width: 225vh;
+    height: 600px;
+  }
+  
+  .login-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px;
+    width: 400px; /* Adjust width as needed */
+    max-width: 100%; /* Ensure it doesn't overflow on smaller screens */
+  }
+  
+  .brand {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .brand-logo {
+    /* You'll likely want to add your actual logo here */
+    width: 60px;
+    height: 60px;
+    background-color: #007bff; /* Example brand color */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* If you're using an image for the logo */
+  /* .brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+  } */
+  
+  .brand h1 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 2em;
+  }
+  
+  .brand p {
+    color: #777;
+    font-size: 0.9em;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.95em;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    width: calc(100% - 22px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .forgot-password {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .login-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-login {
+    margin-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .social-btn:first-child {
+    background-color: #db4437; /* Google Red */
+  }
+  
+  .social-btn:nth-child(2) {
+    background-color: #3b5998; /* Facebook Blue */
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #555;
+  }
+  
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .login-card {
+      padding: 20px;
+    }
+  
+    .brand h1 {
+      font-size: 1.8em;
+    }
+  
+    .brand p {
+      font-size: 0.85em;
+    }
+  
+    .form-group label {
+      font-size: 0.9em;
+    }
+  
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+      font-size: 0.95em;
+    }
+  
+    .remember-forgot {
+      font-size: 0.85em;
+    }
+  
+    .login-btn {
+      font-size: 1em;
+    }
+  
+    .social-login p {
+      font-size: 0.85em;
+    }
+  
+    .social-btn {
+      width: 35px;
+      height: 35px;
+      font-size: 1em;
+    }
+  
+    .signup-link p {
+      font-size: 0.85em;
+    }
+  }

@@ -1,0 +1,95 @@
+/* Sidebar Wrapper */
+.sidebar {
+    width: 240px;
+    background-color: #1e293b;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidebar Brand */
+  .sidebar-brand {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background-color: #0f172a;
+    border-bottom: 1px solid #334155;
+  }
+  
+  /* Sidebar Menu */
+  .sidebar-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex: 1;
+  }
+  
+  .nav-item {
+    border-bottom: 1px solid #334155;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: #334155;
+    color: #fff;
+  }
+  
+  .nav-link.active {
+    background-color: #0ea5e9;
+    color: #fff;
+  }
+  
+  .nav-icon {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  
+  /* Nav Treeview */
+  .nav-treeview {
+    list-style: none;
+    padding-left: 20px;
+    background-color: #1e293b;
+  }
+  
+  .nav-treeview .nav-link {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  
+  /* Main Content */
+  .app-main {
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+  }
+  
+  /* Scrollbar Styling */
+  .sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #64748b;
+    border-radius: 4px;
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background-color: #1e293b;
+  }
+  
